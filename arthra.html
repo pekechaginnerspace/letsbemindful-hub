@@ -194,6 +194,16 @@
   .card-mh .card-cta{ color:var(--olive); border-color:var(--olive); }
   .crumb{ font-size:13px; font-weight:600; color:var(--sub); border-bottom:1px solid var(--line); padding-bottom:2px; }
   .crumb:hover{ color:var(--teal-text); border-color:var(--teal-text); }
+
+  /* κάρτες κατηγοριών με λίστα τίτλων άρθρων */
+  .card-cat:hover{ transform:none; }
+  .card-cat{ justify-content:flex-start; }
+  .card-articles{ list-style:none; margin-top:6px; }
+  .card-articles li{ border-top:1px solid var(--line); }
+  .card-articles a{ display:block; padding:12px 0; font-size:15px; font-weight:600; line-height:1.45; transition:color 0.2s; }
+  .card-mp .card-articles a:hover{ color:var(--teal-text); }
+  .card-mh .card-articles a:hover{ color:var(--olive); }
+  .card-empty{ color:var(--sub); font-size:14px; }
 </style>
 </head>
 <body>
@@ -216,14 +226,16 @@
     <p class="eyebrow">Ενσυνείδητοι στοχασμοί</p>
     <h2>Άρθρα</h2>
     <div class="eco-grid">
-      <a class="card card-cat card-mp" href="/arthra/mindfulpsychology.html">
+      <div class="card card-cat card-mp">
         <h3>mindful psychology</h3>
-        <span class="card-cta">Διάβασε →</span>
-      </a>
-      <a class="card card-cat card-mh" href="/arthra/mindfulhumanity.html">
+        <ul class="card-articles">
+          <li><a href="/arthra/mindfulpsychology/elate-na-mi-milisoume.html">Ελάτε να ΜΗ μιλήσουμε για την Ψυχική Υγεία</a></li>
+        </ul>
+      </div>
+      <div class="card card-cat card-mh">
         <h3>mindful humanity</h3>
-        <span class="card-cta">Διάβασε →</span>
-      </a>
+        <p class="card-empty">Υπό κατασκευή</p>
+      </div>
     </div>
   </div>
 </section>
