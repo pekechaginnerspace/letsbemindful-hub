@@ -184,6 +184,16 @@
   .page-main{ min-height:calc(100vh - 78px - 160px); display:flex; align-items:center; }
   .page-main section{ width:100%; }
   .page-status{ color:var(--sub); font-size:15px; margin-top:12px; }
+
+  /* άρθρα: κατηγορίες */
+  .page-main .eco-grid{ margin-top:28px; }
+  .card-cat{ min-height:150px; justify-content:space-between; }
+  .card-mp{ background:var(--paper-raised); color:var(--ink); border:1px solid var(--line); border-top:4px solid var(--teal); }
+  .card-mp .card-cta{ color:var(--teal-text); border-color:var(--teal-text); }
+  .card-mh{ background:var(--paper-raised); color:var(--ink); border:1px solid var(--line); border-top:4px solid var(--olive); }
+  .card-mh .card-cta{ color:var(--olive); border-color:var(--olive); }
+  .crumb{ font-size:13px; font-weight:600; color:var(--sub); border-bottom:1px solid var(--line); padding-bottom:2px; }
+  .crumb:hover{ color:var(--teal-text); border-color:var(--teal-text); }
 </style>
 </head>
 <body>
@@ -203,9 +213,18 @@
 <main class="page-main">
 <section>
   <div class="wrap reveal">
-    <p class="eyebrow">Γράφουμε</p>
+    <p class="eyebrow">Ενσυνείδητοι στοχασμοί</p>
     <h2>Άρθρα</h2>
-    <p class="page-status">Υπό κατασκευή</p>
+    <div class="eco-grid">
+      <a class="card card-cat card-mp" href="/arthra/mindfulpsychology.html">
+        <h3>mindful psychology</h3>
+        <span class="card-cta">Διάβασε →</span>
+      </a>
+      <a class="card card-cat card-mh" href="/arthra/mindfulhumanity.html">
+        <h3>mindful humanity</h3>
+        <span class="card-cta">Διάβασε →</span>
+      </a>
+    </div>
   </div>
 </section>
 </main>
