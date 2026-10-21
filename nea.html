@@ -185,6 +185,18 @@
   .page-main section{ width:100%; }
   .page-status{ color:var(--sub); font-size:15px; margin-top:12px; }
   .news-lead{ font-size:18px; font-weight:600; line-height:1.55; max-width:40ch; margin-top:8px; }
+
+  /* brand name: πάντα σε μία γραμμή */
+  .brand{ white-space:nowrap; }
+
+  /* νέα: αναρτήσεις με χρυσό bullet */
+  .news-list{ list-style:none; margin-top:8px; max-width:640px; }
+  .news-list li{ position:relative; padding-left:28px; padding-bottom:26px; }
+  .news-list li + li{ padding-top:26px; border-top:1px solid var(--line); }
+  .news-list li::before{ content:''; position:absolute; left:0; top:9px; width:10px; height:10px; border-radius:50%; background:var(--gold-bright); }
+  .news-list li + li::before{ top:35px; }
+  .news-list .news-lead{ margin-top:0; }
+  .news-sub{ color:var(--sub); font-size:15px; margin-top:8px; }
 </style>
 </head>
 <body>
@@ -206,8 +218,12 @@
   <div class="wrap reveal">
     <p class="eyebrow">Τι συμβαίνει</p>
     <h2>Νέα</h2>
-    <p class="news-lead">Επίσημη παρουσίαση του "LET'S BE MINDFUL" στις 21 Φεβρουαρίου 2027.</p>
-    <p class="page-status">Σύντομα να ανακοινωθούν περισσότερες πληροφορίες.</p>
+    <ul class="news-list">
+      <li>
+        <p class="news-lead">Επίσημη παρουσίαση του "<span class="brand">LET'S BE MINDFUL</span>" στις 21 Φεβρουαρίου 2027.</p>
+        <p class="news-sub">Σύντομα να ανακοινωθούν περισσότερες πληροφορίες.</p>
+      </li>
+    </ul>
   </div>
 </section>
 </main>
@@ -224,7 +240,7 @@
       <a href="https://community.letsbemindful.gr" target="_blank" rel="noopener">Community</a>
       <a href="https://open.spotify.com/show/6jJlSfvVETCkG1uloTH8Um" target="_blank" rel="noopener">Podcast</a>
     </div>
-    <div class="fnote">© let's be mindful</div>
+    <div class="fnote">© <span class="brand">let's be mindful</span></div>
   </div>
 </footer>
 
